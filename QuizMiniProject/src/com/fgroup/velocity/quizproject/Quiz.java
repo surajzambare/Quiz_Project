@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 
+
+
 public class Quiz {
 	
 	static int markscounter=0;
@@ -301,6 +303,10 @@ public class Quiz {
 				}
 				
 			}
+			
+			Score.getScore();
+			Examinee ex = new Examinee();
+			ex.setRecord();
 			
 		
 		}catch(Exception e) {
