@@ -14,7 +14,8 @@ public class GetResult {
 		Result r = new Result();
 		System.out.print("	Your Response		: ");
 		int press = sc.nextInt();
-		System.out.println("------------------------------------------------------");
+		System.out.println();
+		System.out.println("---------------------------------------------");
 		
 		switch(press){
 			case 1 : r.getMyResult();
