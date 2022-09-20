@@ -8,13 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-
-
-
 public class Quiz {
 	
 	static int markscounter=0;
-	static int queno = 1;
 
 	public void getQuiz() throws SQLException {
 		
@@ -43,7 +39,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 			}
-			String que1 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que1 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 			
 		//-----------------------------------------------------------//
 			
@@ -56,7 +52,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			String que2 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que2 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -69,7 +65,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			String que3 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que3 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -82,7 +78,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			String que4 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que4 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -95,7 +91,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			String que5 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que5 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -108,7 +104,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			String que6 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que6 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -121,7 +117,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			String que7 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que7 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -134,7 +130,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			String que8 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que8 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -147,7 +143,8 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			String que9 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que9 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+
 					
 		//-----------------------------------------------------------//
 			
@@ -161,7 +158,7 @@ public class Quiz {
 				d=rs.getString("OptionD");
 				}
 			
-			String que10 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+			String que10 = "Question : "+q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 
 		//-----------------------------------------------------------//
 			
@@ -229,7 +226,7 @@ public class Quiz {
 			
 			for(Map.Entry<String, String> map:hm.entrySet()) {
 				System.out.println(map.getKey());
-				queno++;
+				
 				
 			//	Take Answer as Input...
 				@SuppressWarnings("resource")
