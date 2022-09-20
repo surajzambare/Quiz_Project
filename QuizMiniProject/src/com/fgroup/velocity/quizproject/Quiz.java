@@ -15,37 +15,6 @@ public class Quiz {
 	
 	static int markscounter=0;
 	static int queno = 1;
-	
-	//	No-Argument Constructor for calling methods of Class Quiz.
-	Quiz(){
-		
-	}
-	
-	//-----------------------------------------------------------------------------------------//
-	
-	String question;
-
-	//----------------------------------------------------------------------------------------//
-	
-	//	Creating parameterized constructor taking question as input for each Object creation.
-	
-	
-	Quiz(String question){
-		this.question=question;
-	}
-	
-	
-	
-	//----------------------------------------------------------------------------------------//
-	
-	//	Creating method for question calling from database...
-	
-	@Override
-	public String toString() {
-		return "Question"+queno+": "+ question;
-	}
-
-
 
 	public void getQuiz() throws SQLException {
 		
@@ -57,7 +26,6 @@ public class Quiz {
 		
 		//	To store the result from ResultSet.
 			String q = null, a=null, b=null, c=null, d=null;
-			String que = null;
 		
 		//	Getting Questions...
 		
@@ -75,12 +43,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 			}
-		//	Concatenation of Result to pass as parameter for object.
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-		//	Creating Object for First Question...
-			
-			Quiz q1 = new Quiz(que);
+			String que1 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 			
 		//-----------------------------------------------------------//
 			
@@ -93,9 +56,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q2 = new Quiz(que);
+			String que2 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -108,9 +69,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q3 = new Quiz(que);
+			String que3 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -123,9 +82,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q4 = new Quiz(que);
+			String que4 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -138,9 +95,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q5 = new Quiz(que);
+			String que5 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -153,9 +108,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q6 = new Quiz(que);
+			String que6 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -168,9 +121,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q7 = new Quiz(que);
+			String que7 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -183,9 +134,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q8 = new Quiz(que);
+			String que8 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -198,9 +147,7 @@ public class Quiz {
 				c=rs.getString("OptionC");
 				d=rs.getString("OptionD");
 				}
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q9 = new Quiz(que);
+			String que9 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
 					
 		//-----------------------------------------------------------//
 			
@@ -214,10 +161,8 @@ public class Quiz {
 				d=rs.getString("OptionD");
 				}
 			
-			que = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
-			
-			Quiz q10 = new Quiz(que);
-					
+			String que10 = q+"\n\tA: "+a+"\n\tB: "+b+"\n\tC: "+c+"\n\tD: "+d;
+
 		//-----------------------------------------------------------//
 			
 		//	To get The Answers from Table...
@@ -270,19 +215,19 @@ public class Quiz {
 			//	To Store Question as Key ->	Because it Cannot be Duplicate.
 			//	To Store Answers as Value->	Because it can be duplicates.
 			
-			HashMap<Quiz,String> hm = new HashMap<>();
-					hm.put(q1, ans1);
-					hm.put(q2, ans2);
-					hm.put(q3, ans3);
-					hm.put(q4, ans4);
-					hm.put(q5, ans5);
-					hm.put(q6, ans6);	
-					hm.put(q7, ans7);
-					hm.put(q8, ans8);
-					hm.put(q9, ans9);
-					hm.put(q10,ans10);
+			HashMap<String,String> hm = new HashMap<>();
+					hm.put(que1, ans1);
+					hm.put(que2, ans2);
+					hm.put(que3, ans3);
+					hm.put(que4, ans4);
+					hm.put(que5, ans5);
+					hm.put(que6, ans6);	
+					hm.put(que7, ans7);
+					hm.put(que8, ans8);
+					hm.put(que9, ans9);
+					hm.put(que10,ans10);
 			
-			for(Map.Entry<Quiz, String> map:hm.entrySet()) {
+			for(Map.Entry<String, String> map:hm.entrySet()) {
 				System.out.println(map.getKey());
 				queno++;
 				
